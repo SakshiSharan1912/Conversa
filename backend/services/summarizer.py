@@ -15,7 +15,7 @@ OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
 try:
     from langchain_community.llms import Ollama
     from langchain.prompts import PromptTemplate
-    from langchain.chains import LLMChain
+    from langchain.chains import LLMChain 
     LANGCHAIN_OLLAMA_AVAILABLE = True
 except Exception:
     LANGCHAIN_OLLAMA_AVAILABLE = False

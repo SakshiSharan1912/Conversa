@@ -17,8 +17,11 @@ def transcribe_audio(file_path, language="en"):
     :param language: 'es' for Spanish, 'en' for English
     :return: Transcribed text
     """
+    language = (language or "en").strip().lower()
+
     if language not in MODEL_PATHS:
         raise ValueError(f"Unsupported language: {language}")
+
 
     model_path = MODEL_PATHS[language]
 
