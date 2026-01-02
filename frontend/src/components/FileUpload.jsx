@@ -46,7 +46,8 @@ export default function FileUpload({ onResult }) {
     setUploadProgress(0);
 
     try {
-      const res = await axios.post("http://localhost:5000/process", formData, {
+      const res =axios.post(`${import.meta.env.VITE_API_URL}/process`, formData, {
+
         headers: { "Content-Type": "multipart/form-data" },
         onUploadProgress: (progressEvent) => {
           const percent = Math.round((progressEvent.loaded * 100) / progressEvent.total);
